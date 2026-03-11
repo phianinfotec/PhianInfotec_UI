@@ -60,4 +60,14 @@ export class Home { // Implements OnInit hata diya
   toggleAccordion(index: number) {
     this.activeAccordionIndex = this.activeAccordionIndex === index ? -1 : index;
   }
+
+  // services
+services = [
+    { title: 'Creative & Digital Strategy', icon: 'fas fa-lightbulb', items: ['Influencer Strategy', 'Content Marketing'] },
+    { title: 'Media Planning & Buying', icon: 'fas fa-ad', items: ['Video Production', 'Branding & Design'] },
+    { title: 'Technology Services', icon: 'fas fa-laptop-code', items: ['Tech Implementation', 'Consulting'] },
+    { title: 'Analytics & SEO', icon: 'fas fa-chart-line', items: ['Search Engine Optimization', 'Data Insights'] },
+    { title: 'Consulting Services', icon: 'fas fa-bullhorn', items: ['Website Development', 'App Design'] },
+    { title: 'Technology', icon: 'fas fa-microchip', items: ['Media-microchip', 'Public Relations'] }
+  ];
 }

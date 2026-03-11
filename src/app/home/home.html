@@ -10,7 +10,6 @@
   playsinline
   preload="auto"
   [muted]="true"
-    style="background-image: url('https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133%2F681795b5c8bbadc55475a4d4_2324166-hd_1920_1080_25fps-poster-00001.jpg');"
   >
     <source src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133%2F681795b5c8bbadc55475a4d4_2324166-hd_1920_1080_25fps-transcode.mp4" type="video/mp4" />
   </video>
@@ -109,7 +108,7 @@
           <div class="_8px-circle"></div>
           <div class="gradient-bg">About Us</div>
         </div>
-        <h2 class="heading">Transforming Brands with Data-Driven Marketing &amp; SEO</h2>
+        <h2 class="main-title">Transforming Brands with Data-Driven Marketing &amp; SEO</h2>
         
         <div class="about-us-sub-grid">
           <div class="about-us-contents">
@@ -168,669 +167,194 @@
 </section>
 
 
-     <section id="services" class="section flex-center">
+
+ <section class="services-dark-section">
   <div class="container">
-    <div class="title-bar">
-      <div class="product-bar-texts-vertical">
-        <div class="sub-title">
-          <div class="_8px-circle"></div>
-          <div class="gradient-bg">Services</div>
+     <div class="section-title-center">
+      <div class="sub-title">
+         <div class="_8px-circle"></div>Our Services
+      </div>
+      <h2 class="view-all-title">TRANSFORMING BRANDS WITH <br> <span>STRATEGIC SOLUTIONS & DESIGN</span></h2>
+    </div>
+   
+
+    <div class="graph-wrapper">
+      <div class="central-node">
+        <div class="node-inner">
+          <p>TOTAL BRAND SOLUTIONS</p>
+          <h3>SINGLE WINDOW</h3>
         </div>
-        <div class="text-merge-title"><h2 class="heading">View Our Services</h2></div>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" *ngFor="let s of services">
+          <div class="card-head">
+             <i [className]="s.icon"></i>
+             <h3>{{ s.title }}</h3>
+          </div>
+          <ul class="service-list">
+            <li *ngFor="let item of s.items">{{ item }}</li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <div
-      class="w-tabs"
-      style="opacity: 1; transform: translate3d(0, 0, 0);"
-    >
-      <div class="testimonial-card-wrapper w-tab-menu">
-        
-        <a class="tab-link-no-css w-inline-block w-tab-link w--current">
-          <div class="service-card-hover-in">
-            <div class="service-heading-wrapper">
-              <h3 class="service-heading">SEO &amp; Content Marketing</h3>
-              <h3 class="service-heading stroked">SEO &amp; Content Marketing</h3>
-            </div>
-            <div class="client-info">
-              <div class="testimonial-divider"></div>
-              <p class="_14px-text-600">Digital Marketing</p>
-            </div>
-            <div class="service-thumbnail-wrapper">
-              <img
-                loading="lazy"
-                src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91ee_60511.avif"
-                sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 94vw, (max-width: 1562px) 96vw, 1500px"
-                srcset="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91ee_60511-p-500.avif 500w, https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91ee_60511-p-800.avif 800w, https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91ee_60511.avif 1500w"
-                class="service-thumbnail"
-                alt="SEO"
-              />
-              <div class="service-overlay"></div>
-            </div>
-          </div>
-        </a>
-
-        <a class="tab-link-no-css w-inline-block w-tab-link">
-          <div class="service-card-hover-in">
-            <div class="service-heading-wrapper">
-              <h3 class="service-heading">Social Media Marketing</h3>
-              <h3 class="service-heading stroked">Social Media Marketing</h3>
-            </div>
-            <div class="client-info">
-              <div class="testimonial-divider"></div>
-              <p class="_14px-text-600">Social Media</p>
-            </div>
-            <div class="service-thumbnail-wrapper">
-              <img
-                loading="lazy"
-                src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91f5_94833.avif"
-                class="service-thumbnail"
-                alt="Social Media"
-              />
-              <div class="service-overlay"></div>
-            </div>
-          </div>
-        </a>
-
-        <a class="tab-link-no-css w-inline-block w-tab-link">
-          <div class="service-card-hover-in">
-            <div class="service-heading-wrapper">
-              <h3 class="service-heading">Paid Advertising</h3>
-              <h3 class="service-heading stroked">Paid Advertising</h3>
-            </div>
-            <div class="client-info">
-              <div class="testimonial-divider"></div>
-              <p class="_14px-text-600">Lead Generation</p>
-            </div>
-            <div class="service-thumbnail-wrapper">
-              <img
-                loading="lazy"
-                src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e7_90929.avif"
-                class="service-thumbnail"
-                alt="Paid Ads"
-              />
-              <div class="service-overlay"></div>
-            </div>
-          </div>
-        </a>
-
-        <a class="tab-link-no-css w-inline-block w-tab-link">
-          <div class="service-card-hover-in">
-            <div class="service-heading-wrapper">
-              <h3 class="service-heading">Branding &amp; Design</h3>
-              <h3 class="service-heading stroked">Branding &amp; Design</h3>
-            </div>
-            <div class="client-info">
-              <div class="testimonial-divider"></div>
-              <p class="_14px-text-600">Creative</p>
-            </div>
-            <div class="service-thumbnail-wrapper">
-              <img
-                loading="lazy"
-                src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91f4_2149241210.avif"
-                class="service-thumbnail"
-                alt="Branding"
-              />
-              <div class="service-overlay"></div>
-            </div>
-          </div>
-        </a>
-
-        <a class="tab-link-no-css w-inline-block w-tab-link">
-          <div class="service-card-hover-in">
-            <div class="service-heading-wrapper">
-              <h3 class="service-heading">Lead Generation</h3>
-              <h3 class="service-heading stroked">Lead Generation</h3>
-            </div>
-            <div class="client-info">
-              <div class="testimonial-divider"></div>
-              <p class="_14px-text-600">Email Marketing</p>
-            </div>
-            <div class="service-thumbnail-wrapper">
-              <img
-                loading="lazy"
-                src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a921a_17660.avif"
-                class="service-thumbnail"
-                alt="Lead Gen"
-              />
-              <div class="service-overlay"></div>
-            </div>
-          </div>
-        </a>
-
-        <a class="tab-link-no-css w-inline-block w-tab-link">
-          <div class="service-card-hover-in">
-            <div class="service-heading-wrapper">
-              <h3 class="service-heading">Analytics &amp; Tracking</h3>
-              <h3 class="service-heading stroked">Analytics &amp; Tracking</h3>
-            </div>
-            <div class="client-info">
-              <div class="testimonial-divider"></div>
-              <p class="_14px-text-600">Data &amp; Insights</p>
-            </div>
-            <div class="service-thumbnail-wrapper">
-              <img
-                loading="lazy"
-                src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9247_pexels-energepic-com-27411-159888.avif"
-                class="service-thumbnail"
-                alt="Analytics"
-              />
-              <div class="service-overlay"></div>
-            </div>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="infinity-hero-slides">
-    <div class="infinity-carousel-container-2deg-rotate primary">
-      <div class="infinity-slider-carousel">
-        <div class="infinity-item-container inline">
-          <div class="infinity-text">Design Studio</div>
-          <div class="infinity-text">Web Agency</div>
-          <div class="infinity-text">SEO AGENCY</div>
-        </div>
-        <div class="infinity-item-container inline">
-          <div class="infinity-text">Design Studio</div>
-          <div class="infinity-text">Web Agency</div>
-          <div class="infinity-text">SEO AGENCY</div>
-        </div>
-      </div>
-    </div>
-    <div class="infinity-carousel-container-2deg-rotate">
-      <div class="infinity-slider-carousel">
-        <div class="infinity-item-container inline">
-          <div class="infinity-text">Design Studio</div>
-          <div class="infinity-text">Web Agency</div>
-          <div class="infinity-text">SEO AGENCY</div>
-        </div>
-        <div class="infinity-item-container inline">
-          <div class="infinity-text">Design Studio</div>
-          <div class="infinity-text">Web Agency</div>
-          <div class="infinity-text">SEO AGENCY</div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
-<section class="infinity-carousel-container">
-  <div class="infinity-slider-carousel animate-left">
-    <div class="infinity-item-container">
-      <img src="logo1.png" class="partner-logo" />
-      <img src="logo2.png" class="partner-logo" />
-      <img src="logo1.png" class="partner-logo" />
-      <img src="logo2.png" class="partner-logo" />
+<section id="projects" class="horizontal-slider-section">
+  <div class="camera">
+    
+    <div class="section-title-center">
+      <div class="sub-title">
+         <div class="_8px-circle"></div> Projects
+      </div>
+      <h2 class="view-all-title">Our Recent Projects</h2>
     </div>
-  </div>
-</section>
 
-      <section id="projects"
-        data-w-id="6a38a641-5cca-1029-8d13-02aa314c24bf"
-        class="horizontal-slider-section"
-      >
-        <div class="camera">
-          <div class="frame">
-            <div class="item">
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e3_annie-spratt-hCb3lIB8L8E-unsplash.avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 1920px) 100vw, 1920px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e3_annie-spratt-hCb3lIB8L8E-unsplash-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e3_annie-spratt-hCb3lIB8L8E-unsplash-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e3_annie-spratt-hCb3lIB8L8E-unsplash-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e3_annie-spratt-hCb3lIB8L8E-unsplash-p-1600.avif 1600w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e3_annie-spratt-hCb3lIB8L8E-unsplash.avif        1920w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">BrandBoost 360</h3>
-                  </div></a
-                >
-              </div>
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9255_seo-galaxy-zZ7J5qri6qY-unsplash%20(1).avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 2400px) 100vw, 2400px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9255_seo-galaxy-zZ7J5qri6qY-unsplash%2520(1)-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9255_seo-galaxy-zZ7J5qri6qY-unsplash%2520(1)-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9255_seo-galaxy-zZ7J5qri6qY-unsplash%2520(1)-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9255_seo-galaxy-zZ7J5qri6qY-unsplash%2520(1)-p-1600.avif 1600w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9255_seo-galaxy-zZ7J5qri6qY-unsplash%2520(1)-p-2000.avif 2000w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9255_seo-galaxy-zZ7J5qri6qY-unsplash%20(1).avif          2400w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">Identity Ignite</h3>
-                  </div></a
-                >
-              </div>
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%20(1).avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 4800px) 100vw, 4800px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%2520(1)-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%2520(1)-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%2520(1)-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%2520(1)-p-1600.avif 1600w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%2520(1)-p-2000.avif 2000w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%2520(1)-p-2600.avif 2600w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%2520(1)-p-3200.avif 3200w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%20(1).avif          4800w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">VisualVibe</h3>
-                  </div></a
-                >
-              </div>
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9243_pexels-kindelmedia-7688336.avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 1920px) 100vw, 1920px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9243_pexels-kindelmedia-7688336-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9243_pexels-kindelmedia-7688336-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9243_pexels-kindelmedia-7688336-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9243_pexels-kindelmedia-7688336-p-1600.avif 1600w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9243_pexels-kindelmedia-7688336.avif        1920w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">Elite Branding</h3>
-                  </div></a
-                >
-              </div>
-            </div>
-            <div class="item">
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a922b_2150104516.avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 1500px) 100vw, 1500px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a922b_2150104516-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a922b_2150104516-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a922b_2150104516-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a922b_2150104516.avif        1500w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">SEO Surge</h3>
-                  </div></a
-                >
-              </div>
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91f5_94833.avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 1500px) 100vw, 1500px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91f5_94833-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91f5_94833-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91f5_94833-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91f5_94833.avif        1500w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">Content Craft</h3>
-                  </div></a
-                >
-              </div>
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e7_90929.avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 1500px) 100vw, 1500px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e7_90929-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e7_90929-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e7_90929-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e7_90929.avif        1500w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">SearchMastery</h3>
-                  </div></a
-                >
-              </div>
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9228_2149629602.avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 1500px) 100vw, 1500px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9228_2149629602-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9228_2149629602-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9228_2149629602-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9228_2149629602.avif        1500w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">Content Impact</h3>
-                  </div></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="frame-reverse">
-            <div class="item">
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a922b_2150104516.avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 1500px) 100vw, 1500px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a922b_2150104516-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a922b_2150104516-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a922b_2150104516-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a922b_2150104516.avif        1500w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">SEO Surge</h3>
-                  </div></a
-                >
-              </div>
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91f5_94833.avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 1500px) 100vw, 1500px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91f5_94833-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91f5_94833-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91f5_94833-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91f5_94833.avif        1500w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">Content Craft</h3>
-                  </div></a
-                >
-              </div>
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e7_90929.avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 1500px) 100vw, 1500px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e7_90929-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e7_90929-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e7_90929-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e7_90929.avif        1500w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">SearchMastery</h3>
-                  </div></a
-                >
-              </div>
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9228_2149629602.avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 1500px) 100vw, 1500px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9228_2149629602-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9228_2149629602-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9228_2149629602-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9228_2149629602.avif        1500w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">Content Impact</h3>
-                  </div></a
-                >
-              </div>
-            </div>
-            <div class="item">
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e3_annie-spratt-hCb3lIB8L8E-unsplash.avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 1920px) 100vw, 1920px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e3_annie-spratt-hCb3lIB8L8E-unsplash-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e3_annie-spratt-hCb3lIB8L8E-unsplash-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e3_annie-spratt-hCb3lIB8L8E-unsplash-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e3_annie-spratt-hCb3lIB8L8E-unsplash-p-1600.avif 1600w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a91e3_annie-spratt-hCb3lIB8L8E-unsplash.avif        1920w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">BrandBoost 360</h3>
-                  </div></a
-                >
-              </div>
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9255_seo-galaxy-zZ7J5qri6qY-unsplash%20(1).avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 2400px) 100vw, 2400px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9255_seo-galaxy-zZ7J5qri6qY-unsplash%2520(1)-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9255_seo-galaxy-zZ7J5qri6qY-unsplash%2520(1)-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9255_seo-galaxy-zZ7J5qri6qY-unsplash%2520(1)-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9255_seo-galaxy-zZ7J5qri6qY-unsplash%2520(1)-p-1600.avif 1600w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9255_seo-galaxy-zZ7J5qri6qY-unsplash%2520(1)-p-2000.avif 2000w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9255_seo-galaxy-zZ7J5qri6qY-unsplash%20(1).avif          2400w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">Identity Ignite</h3>
-                  </div></a
-                >
-              </div>
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%20(1).avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 4800px) 100vw, 4800px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%2520(1)-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%2520(1)-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%2520(1)-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%2520(1)-p-1600.avif 1600w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%2520(1)-p-2000.avif 2000w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%2520(1)-p-2600.avif 2600w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%2520(1)-p-3200.avif 3200w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9259_dane-deaner-_-KLkj7on_c-unsplash%20(1).avif          4800w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">VisualVibe</h3>
-                  </div></a
-                >
-              </div>
-              <div data-w-id="bd580cc7-f640-8c81-fd02-cec679ac6e43" class="portfolio-horizontal">
-                <a
-                  href="https://webflow.com/templates/designers/nexoy"
-                  target="_blank"
-                  class="portfolio-card w-inline-block"
-                  ><img
-                    src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9243_pexels-kindelmedia-7688336.avif"
-                    loading="lazy"
-                    alt=""
-                    sizes="(max-width: 1920px) 100vw, 1920px"
-                    srcset="
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9243_pexels-kindelmedia-7688336-p-500.avif   500w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9243_pexels-kindelmedia-7688336-p-800.avif   800w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9243_pexels-kindelmedia-7688336-p-1080.avif 1080w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9243_pexels-kindelmedia-7688336-p-1600.avif 1600w,
-                      https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67bad91522bc0ef5852a9243_pexels-kindelmedia-7688336.avif        1920w
-                    "
-                    class="portfolio-thumbnail"
-                  />
-                  <div class="black-overlay"></div>
-                  <div class="portfolio-info-card">
-                    <h3 class="heading-24px-uppercase">Elite Branding</h3>
-                  </div></a
-                >
-              </div>
-            </div>
-          </div>
-          <a href="#" class="circle-percentage w-inline-block"
-            ><div class="circle-inside-wrapper">
-              <div class="circle-percentage-white"><h2 class="_30px-text-black">Projects</h2></div>
-              <div class="circle-percentage-color"></div></div
-          ></a>
-        </div>
-      </section>
+    <div class="frame">
+      
+      <div class="portfolio-horizontal">
+        <a href="https://shravanhospital.com/" target="_blank" class="portfolio-card">
+          <img src="assets/shpl.png" loading="lazy" class="portfolio-thumbnail" />
+          <div class="black-overlay"></div>
+          <div class="portfolio-info-card"><h3>Shravan Hospital</h3></div>
+        </a>
+      </div>
 
-      <section class="section-60px">
-  <div class="infinity-carousel-container primary">
-    <div class="infinity-slider-carousel">
-      <div class="infinity-item-container animate-left">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b3156_logo-bronx.svg" class="partner-logo" alt="Bronx">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b3180_Nexoy.webp" class="partner-logo" alt="Nexoy">
-        <img width="70" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b3170_logo-wand.svg" class="partner-logo" alt="Wand">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b315a_logo-ronda.svg" class="partner-logo" alt="Ronda">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b3159_logo-tate.svg" class="partner-logo" alt="Tate">
+      <div class="portfolio-horizontal">
+        <a href="https://pilesfistulacure.com/" target="_blank" class="portfolio-card">
+          <img src="assets/c-2.jpg" loading="lazy" class="portfolio-thumbnail" />
+          <div class="black-overlay"></div>
+          <div class="portfolio-info-card"><h3>Abhyudaya Piles Hospital</h3></div>
+        </a>
       </div>
-      <div class="infinity-item-container animate-left">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b3156_logo-bronx.svg" class="partner-logo" alt="">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b3180_Nexoy.webp" class="partner-logo" alt="">
-        <img width="70" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b3170_logo-wand.svg" class="partner-logo" alt="">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b315a_logo-ronda.svg" class="partner-logo" alt="">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b3159_logo-tate.svg" class="partner-logo" alt="">
+
+      <div class="portfolio-horizontal">
+        <a href="https://drsaketmundhada.com/home" target="_blank" class="portfolio-card">
+          <img src="assets/c-5.jpeg" loading="lazy" class="portfolio-thumbnail" />
+          <div class="black-overlay"></div>
+          <div class="portfolio-info-card"><h3>Shree Mundhada Clinic</h3></div>
+        </a>
       </div>
+
+      <div class="portfolio-horizontal">
+        <a href="https://krishnabuilders.com/" target="_blank" class="portfolio-card">
+          <img src="assets/c-6.jpeg" loading="lazy" class="portfolio-thumbnail" />
+          <div class="black-overlay"></div>
+          <div class="portfolio-info-card"><h3>Krishna Constructions</h3></div>
+        </a>
+      </div>
+
+      <div class="portfolio-horizontal">
+        <a href="https://cipskamptee.in/" target="_blank" class="portfolio-card">
+          <img src="assets/c-3.jpg" loading="lazy" class="portfolio-thumbnail" />
+          <div class="black-overlay"></div>
+          <div class="portfolio-info-card"><h3>Central India Public School</h3></div>
+        </a>
+      </div>
+
+      <div class="portfolio-horizontal">
+        <a href="https://designinside.co.in/" target="_blank" class="portfolio-card">
+          <img src="assets/c-4.png" loading="lazy" class="portfolio-thumbnail" />
+          <div class="black-overlay"></div>
+          <div class="portfolio-info-card"><h3>Design Inside</h3></div>
+        </a>
+      </div>
+
+      <div class="portfolio-horizontal">
+        <a href="https://mukundainfraventures.in/home" target="_blank" class="portfolio-card">
+          <img src="assets/c-7.jpg" loading="lazy" class="portfolio-thumbnail" />
+          <div class="black-overlay"></div>
+          <div class="portfolio-info-card"><h3>Mukunda Infraventures Private Limited</h3></div>
+        </a>
+      </div>
+
+      <!-- DUPLICATE (same again) -->
+        <div class="portfolio-horizontal">
+        <a href="https://shravanhospital.com/" target="_blank" class="portfolio-card">
+          <img src="assets/shpl.png" loading="lazy" class="portfolio-thumbnail" />
+          <div class="black-overlay"></div>
+          <div class="portfolio-info-card"><h3>Shravan Hospital</h3></div>
+        </a>
+      </div>
+
+      <div class="portfolio-horizontal">
+        <a href="https://pilesfistulacure.com/" target="_blank" class="portfolio-card">
+          <img src="assets/c-2.jpg" loading="lazy" class="portfolio-thumbnail" />
+          <div class="black-overlay"></div>
+          <div class="portfolio-info-card"><h3>Abhyudaya Piles Hospital</h3></div>
+        </a>
+      </div>
+
+      <div class="portfolio-horizontal">
+        <a href="https://drsaketmundhada.com/home" target="_blank" class="portfolio-card">
+          <img src="assets/c-5.jpeg" loading="lazy" class="portfolio-thumbnail" />
+          <div class="black-overlay"></div>
+          <div class="portfolio-info-card"><h3>Shree Mundhada Clinic</h3></div>
+        </a>
+      </div>
+
+      <div class="portfolio-horizontal">
+        <a href="https://krishnabuilders.com/" target="_blank" class="portfolio-card">
+          <img src="assets/c-6.jpeg" loading="lazy" class="portfolio-thumbnail" />
+          <div class="black-overlay"></div>
+          <div class="portfolio-info-card"><h3>Krishna Constructions</h3></div>
+        </a>
+      </div>
+
+      <div class="portfolio-horizontal">
+        <a href="https://cipskamptee.in/" target="_blank" class="portfolio-card">
+          <img src="assets/c-3.jpg" loading="lazy" class="portfolio-thumbnail" />
+          <div class="black-overlay"></div>
+          <div class="portfolio-info-card"><h3>Central India Public School</h3></div>
+        </a>
+      </div>
+
+      <div class="portfolio-horizontal">
+        <a href="https://designinside.co.in/" target="_blank" class="portfolio-card">
+          <img src="assets/c-4.png" loading="lazy" class="portfolio-thumbnail" />
+          <div class="black-overlay"></div>
+          <div class="portfolio-info-card"><h3>Design Inside</h3></div>
+        </a>
+      </div>
+
+      <div class="portfolio-horizontal">
+        <a href="https://mukundainfraventures.in/home" target="_blank" class="portfolio-card">
+          <img src="assets/c-7.jpg" loading="lazy" class="portfolio-thumbnail" />
+          <div class="black-overlay"></div>
+          <div class="portfolio-info-card"><h3>Mukunda Infraventures Private Limited</h3></div>
+        </a>
+      </div>
+    </div> 
+  </div> 
+  </section>
+
+    
+    <!-- <section class="logo-strip-section">
+  <div class="logo-strip">
+    <div class="logo-track">
+
+      <img src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b3156_logo-bronx.svg">
+      <img src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b3180_Nexoy.webp">
+      <img src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b3170_logo-wand.svg">
+      <img src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b315a_logo-ronda.svg">
+      <img src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b3159_logo-tate.svg">
+
+      
+      <img src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b3156_logo-bronx.svg">
+      <img src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b3180_Nexoy.webp">
+      <img src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b3170_logo-wand.svg">
+      <img src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b315a_logo-ronda.svg">
+      <img src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b3159_logo-tate.svg">
+
     </div>
   </div>
 
-  <div class="infinity-carousel-container">
-    <div class="infinity-slider-carousel">
-      <div class="infinity-item-container animate-right">
-        <img width="70" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b30e4_customers_7.svg" class="sponser-logo" alt="Customer 7">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b30ec_customers_6.svg" class="sponser-logo" alt="Customer 6">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b30ea_customers_2.svg" class="sponser-logo" alt="Customer 2">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b30e5_customers_5.svg" class="sponser-logo" alt="Customer 5">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30af/678de14f2f97a222033b30e7_bronx.svg" class="sponser-logo" alt="Bronx">
-      </div>
-      <div class="infinity-item-container animate-right">
-        <img width="70" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30e4_customers_7.svg" class="sponser-logo" alt="">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30ec_customers_6.svg" class="sponser-logo" alt="">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30ea_customers_2.svg" class="sponser-logo" alt="">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30e5_customers_5.svg" class="sponser-logo" alt="">
-        <img width="59.5" loading="lazy" src="https://cdn.prod.website-files.com/678de14f2f97a222033b30e7_bronx.svg" class="sponser-logo" alt="">
-      </div>
-    </div>
-  </div>
-</section>
+</section> -->
+
+
+
       <!-- <section id="pricing" class="tertiary-section">
         <div class="container">
           <div class="title-bar">
