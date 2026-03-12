@@ -5,3 +5,10 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  font-family: 'Mundial', sans-serif;
+  margin: 0;
+  padding: 0;
+ 
+}
