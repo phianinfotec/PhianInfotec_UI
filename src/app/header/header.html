@@ -1,34 +1,67 @@
 <div class="site-wrapper">
+
   <div class="navbar-main w-nav" id="navbar">
+
     <div class="navbar">
-      
+
+     
+
       <a [routerLink]="['/']" (click)="closeMenu()" class="site-logo-wrapper w-inline-block">
+
         <img src="assets/white-color-logo.png" alt="phian logo" class="site-logo" style="width: 120px; height: 90px;" />
+
       </a>
 
+
+
       <div class="hamburger-menu w-nav-button" [class.open]="isMenuOpen" (click)="toggleMenu()">
+
         <div class="bars">
+
           <div class="hamburger-line _1"></div>
+
           <div class="hamburger-line _2"></div>
+
           <div class="hamburger-line _3"></div>
+
         </div>
+
       </div>
 
+
+
       <nav role="navigation" class="nav-menu-wrapper w-nav-menu" [class.nav-open]="isMenuOpen">
+
         <div class="nav-menu">
+
           <a routerLink="/" fragment="hero" (click)="closeMenu()" class="nav-link-wrapper w-inline-block"><div class="nav-link">Home</div></a>
+
           <a routerLink="/" fragment="about" (click)="closeMenu()" class="nav-link-wrapper w-inline-block"><div class="nav-link">About</div></a>
+
           <a routerLink="/" fragment="services" (click)="closeMenu()" class="nav-link-wrapper w-inline-block"><div class="nav-link">Services</div></a>
+
           <a routerLink="/" fragment="works" (click)="closeMenu()" class="nav-link-wrapper w-inline-block"><div class="nav-link">Works</div></a>
+
           <a routerLink="/" fragment="client" (click)="closeMenu()" class="nav-link-wrapper w-inline-block"><div class="nav-link">Client</div></a>
+
           <a routerLink="/" fragment="team" (click)="closeMenu()" class="nav-link-wrapper w-inline-block"><div class="nav-link">Team</div></a>
-          
+
+         
+
           <a routerLink="/" fragment="contact" (click)="closeMenu()" class="primary-button w-inline-block">
+
             <div class="button-text">Contact Us</div>
+
           </a>
+
         </div>
+
       </nav>
 
+
+
     </div>
+
   </div>
+
 </div>
