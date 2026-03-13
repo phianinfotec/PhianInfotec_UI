@@ -1,49 +1,81 @@
 
-<section class="career-hero">
+<section class="panga-header">
+  <div class="panga-container">
+    
+    <div class="panga-text-side">
+      <h1 class="panga-title">DREAM</h1>
+      <h1 class="panga-title">BUILD</h1>
+      <h1 class="panga-title">GROW</h1>
+      <h1 class="panga-title">REPEAT</h1>
+    </div>
 
-<div class="career-hero-content">
-  <h1>Join Our Team</h1>
-  <p>
-    Build your career with a passionate team that loves creativity,
-    innovation and digital growth.
-  </p>
+    <div class="panga-bubble-side">
+      <div class="quote-bubble">
+        <p>
+          At Phian Infotec, we believe that every pixel tells a story and every line of code builds a legacy. We are not just looking for skill sets; we are looking for mindsets that thrive on innovation and creative chaos.
+        </p>
+        <p>
+          Join a culture where your ideas aren't just heard—they are executed. We value the "Digital Rebels" who dare to disrupt the ordinary and build the extraordinary.
+        </p>
+       <a [routerLink]="['.']" fragment="opportunities" class="panga-btn">EXPLORE ROLES</a>
+      </div>
+    </div>
 
-  <a href="" class="career-btn">View Open Positions</a>
-</div>
-
+  </div>
 </section>
 
-<section class="career-jobs" id="jobs">
+<section class="career-jobs" id="opportunities">
+  <div class="container">
+    <div class="section-header">
+      <h2>Career <span class="text-yellow">Opportunities</span></h2>
+      <p>Explore the roles and find your place at Phian Infotec.</p>
+    </div>
 
-<h2>Open Positions</h2>
+    <div class="job-grid">
+      <div class="job-card">
+        <div class="job-badge">Design</div>
+        <h3>Graphic Designer</h3>
+        <p>Create visually stunning designs for web, print, and digital campaigns using Photoshop, Illustrator & Figma.</p>
+        <button (click)="openForm()" class="apply-btn">Apply Now</button>
+      </div>
 
-<div class="job-grid">
+      <div class="job-card">
+        <div class="job-badge">Video</div>
+        <h3>Motion Graphics Designer</h3>
+        <p>Produce engaging video content and motion graphics using After Effects, Premiere Pro, and other tools.</p>
+        <button (click)="openForm()" class="apply-btn">Apply Now</button>
+      </div>
 
-<div class="job-card">
-<h3>Digital Marketing Executive</h3>
-<p>Experience: 1-3 Years</p>
-<span>Full Time</span>
-<button (click)="openForm()" class="apply-btn">Apply Now</button>
-</div>
+      <div class="job-card">
+        <div class="job-badge">Marketing</div>
+        <h3>SEO Analyst</h3>
+        <p>Optimize websites, monitor keyword rankings, and drive organic traffic through SEO best practices.</p>
+        <button (click)="openForm()" class="apply-btn">Apply Now</button>
+      </div>
 
-<div class="job-card">
-<h3>SEO Specialist</h3>
-<p>Experience: 2+ Years</p>
-<span>Full Time</span>
-<button (click)="openForm()" class="apply-btn">Apply Now</button>
-</div>
+      <div class="job-card">
+        <div class="job-badge">Strategy</div>
+        <h3>Media Marketing</h3>
+        <p>Plan and execute online campaigns across Instagram, Facebook, and YouTube for brand growth and visibility.</p>
+        <button (click)="openForm()" class="apply-btn">Apply Now</button>
+      </div>
 
-<div class="job-card">
-<h3>Web Developer</h3>
-<p>Experience: 2-4 Years</p>
-<span>Full Time</span>
-<button (click)="openForm()" class="apply-btn">Apply Now</button>
-</div>
+      <div class="job-card">
+        <div class="job-badge">Tech</div>
+        <h3>Website Developer</h3>
+        <p>Build clean, responsive interfaces using Angular, HTML, CSS, and modern UI frameworks.</p>
+        <button (click)="openForm()" class="apply-btn">Apply Now</button>
+      </div>
 
-</div>
-
+      <div class="job-card">
+        <div class="job-badge">PR</div>
+        <h3>Public Relationship Executive</h3>
+        <p>Foster strong relationships with clients and media, manage brand reputation, and enhance communication strategies.</p>
+        <button (click)="openForm()" class="apply-btn">Apply Now</button>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 <div class="apply-modal" *ngIf="showForm">
 

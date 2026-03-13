@@ -1,0 +1,105 @@
+/* --- Client Section Basics --- */
+.phian-client-section {
+  background-color: #000; /* Pure Black Theme */
+  color: #fff;
+  padding: clamp(60px, 10vw, 120px) 20px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* --- Section Header (Social Panga Style) --- */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: clamp(50px, 8vw, 80px);
+}
+
+.tagline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  color: #f7c600; /* branding yellow */
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.tagline .dot {
+  width: 8px; height: 8px; background: #f7c600; border-radius: 50%;
+}
+
+.main-title {
+  font-size: clamp(32px, 5vw, 64px); /* Massive responsive scaling */
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #fff;
+}
+
+.description {
+  color: #888;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* --- Logo Grid Logic --- */
+.client-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Desktop: 6 Columns */
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.logo-box {
+  background: #111; /* Dark background box */
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #222; /* Clean border */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  height: 160px; /* Fixed height for consistency */
+}
+
+.logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Logos na katein */
+  transition: 0.3s;
+}
+
+/* --- Hover Effects --- */
+.logo-box:hover {
+  background: #1a1a1a;
+  border-color: #f7c600; /* Border yellow ho jayega */
+  transform: translateY(-5px); /* Chhota angular movement */
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 1100px) {
+  .client-logo-grid { grid-template-columns: repeat(4, 1fr); } /* Tablet: 4 Columns */
+}
+
+@media (max-width: 768px) {
+  .client-logo-grid { grid-template-columns: repeat(3, 1fr); gap: 20px;} /* Mobile: 3 Columns */
+  .logo-box { height: 120px; padding: 20px; }
+  .description { font-size: 16px; }
+}
+
+@media (max-width: 500px) {
+  .client-logo-grid { grid-template-columns: repeat(2, 1fr); } /* Small Mobile: 2 Columns */
+}

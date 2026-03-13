@@ -1,164 +1,366 @@
-.career-hero{
-  background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
-  url('/assets/images/career-bg.jpg');
-  background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
-
-  color:#fff;
-  padding:160px 20px;
-  text-align:center;
+/* --- Header Section (Social Panga Style) --- */
+.panga-header {
+  background-color: #f7c600; 
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden; /* Massive text ko screen se bahar jane se rokne ke liye */
 }
 
-.career-hero-content{
-  max-width:700px;
-  margin:auto;
-}
-.career-hero h1{
-  font-size:50px;
-  color:#f7c600;
-}
-
-.career-hero p{
-  max-width:600px;
-  margin:auto;
-  margin-top:20px;
-  color:#aaa;
+.panga-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Desktop: Side by Side */
+  align-items: center;
+  gap: 40px;
+  width: 100%;
 }
 
-.career-btn{
-  display:inline-block;
-  margin-top:30px;
-  background:#f7c600;
-  color:#000;
-  padding:14px 30px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
+/* Typography Logic */
+.panga-text-side {
+  cursor: default;
 }
 
-.career-jobs{
-  background:#000;
-  padding:100px 20px;
+.panga-title {
+  /* clamp use kiya hai taaki mobile par text size apne aap chota ho jaye */
+  font-size: clamp(45px, 10vw, 130px); 
+  line-height: 0.85;
+  font-weight: 900;
+  margin: 0;
+  color: transparent;
+  -webkit-text-stroke: 2px #d1a800;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.career-jobs h2{
-  text-align:center;
-  color:#f7c600;
-  font-size:40px;
-  margin-bottom:60px;
+/* Hover Effect */
+.panga-title:hover {
+  color: #ffffff;
+  -webkit-text-stroke: 2px #ffffff;
+  transform: translateX(20px);
 }
 
-.job-grid{
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
+/* --- Bubble Styles --- */
+.quote-bubble {
+  background: #fff;
+  padding: clamp(25px, 5vw, 50px); /* Padding responsive banayi hai */
+  border-radius: 40px;
+  position: relative;
+  box-shadow: 15px 15px 0px rgba(0,0,0,0.08);
 }
 
-.job-card{
-  background:#111;
-  padding:30px;
-  border-radius:10px;
-  border:1px solid #222;
-  transition:0.4s;
+/* Bubble Triangle */
+.quote-bubble::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 60px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 20px solid #fff;
 }
 
-.job-card:hover{
-  transform:translateY(-10px);
-  border-color:#f7c600;
+.quote-bubble p {
+  color: #333;
+  font-size: clamp(16px, 2vw, 18px); /* Paragraph text size adjustment */
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.job-card h3{
-  color:#fff;
-  margin-bottom:10px;
+/* Button inside bubble */
+.panga-btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+  transition: 0.3s;
+  margin-top: 10px;
 }
 
-.job-card p{
-  color:#aaa;
+.panga-btn:hover {
+  transform: scale(1.05);
+  background: #222;
 }
 
-.job-card span{
-  display:inline-block;
-  margin:10px 0;
-  color:#f7c600;
+/* --- Responsive Media Queries --- */
+
+/* Tablets aur Chote Laptops (Max 1024px) */
+@media (max-width: 1024px) {
+  .panga-container {
+    gap: 30px;
+  }
 }
 
-.job-card button{
-  background:#f7c600;
-  border:none;
-  padding:10px 20px;
-  border-radius:20px;
-  cursor:pointer;
+/* Mobile Devices (Max 768px) */
+@media (max-width: 768px) {
+  .panga-header {
+    padding: 60px 20px;
+    min-height: auto; /* Mobile par height content ke hisaab se hogi */
+  }
+
+  .panga-container {
+    grid-template-columns: 1fr; /* Mobile par stack (ek ke upar ek) */
+    text-align: center;
+  }
+
+  .panga-title:hover {
+    transform: none; /* Mobile par sideways shift hata diya taaki layout na bigde */
+  }
+
+  .quote-bubble {
+    margin-top: 40px;
+    border-radius: 30px;
+  }
+
+  /* Bubble tip ko hide karna ya rotate karna mobile ke liye */
+  .quote-bubble::before {
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%) rotate(90deg); /* Tip ab upar ki taraf point karegi */
+  }
 }
 
-.apply-modal{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-display:flex;
-align-items:center;
-justify-content:center;
-z-index:9999;
+/* --- Desktop Hover (Mouse) --- */
+@media (min-width: 992px) {
+  .panga-title:hover {
+    color: #ffffff;
+    -webkit-text-stroke: 2px #ffffff;
+    transform: translateX(20px);
+    cursor: pointer;
+  }
 }
 
-.form-box{
-background:#111;
-padding:40px;
-width:420px;
-border-radius:12px;
-position:relative;
-border:1px solid #333;
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
-animation:popup .4s ease;
+/* --- Mobile/Tablet behavior (Touch) --- */
+@media (max-width: 991px) {
+  .panga-title {
+    /* Mobile par hum stroke ko thoda light rakhte hain taaki readability bani rahe */
+    -webkit-text-stroke: 1.5px #d1a800; 
+  }
+
+  /* Mobile par jab user tap karega (active state) tab white hoga */
+  .panga-title:active {
+    color: #ffffff;
+    -webkit-text-stroke: 1.5px #ffffff;
+    transform: scale(1.05); /* Tap karne par halka sa zoom effect */
+    transition: 0.1s;
+  }
+
+  .panga-title:hover {
+    /* Mobile par hover effects ko limit kar diya taaki sticky hover issue na ho */
+    transform: none; 
+  }
 }
 
-@keyframes popup{
-from{
-transform:scale(.8);
-opacity:0;
-}
-to{
-transform:scale(1);
-opacity:1;
-}
+
+/* --- Opportunities Section --- */
+.career-jobs {
+  background: #000;
+  padding: clamp(60px, 10vw, 120px) 20px; /* Responsive padding */
 }
 
-.form-box h2{
-color:#f7c600;
-margin-bottom:20px;
+.section-header {
+  text-align: center;
+  margin-bottom: clamp(40px, 8vw, 70px);
+}
+
+.section-header h2 { 
+  font-size: clamp(32px, 5vw, 48px); 
+  font-weight: 800; 
+  color: #fff; 
+}
+
+.text-yellow { color: #f7c600; }
+
+.section-header p { 
+  color: #888; 
+  font-size: clamp(16px, 2vw, 18px); 
+  margin-top: 10px; 
+}
+
+/* --- Job Grid (Responsive 3-2-1 Logic) --- */
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Desktop: 3 Cards */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.job-card {
+  background: #111;
+  padding: clamp(25px, 4vw, 40px);
+  border-radius: 24px;
+  border: 1px solid #222;
+  position: relative;
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.job-badge {
+  background: rgba(247, 198, 0, 0.1);
+  color: #f7c600;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+
+.job-card h3 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.job-card p {
+  color: #888;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  min-height: 60px;
+}
+
+.apply-btn {
+  background: #f7c600;
+  color: #000;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%; /* Mobile par full width click ke liye better hai */
+}
+
+.job-card:hover {
+  background: #1a1a1a;
+  border-color: #f7c600;
+  transform: translateY(-10px);
+}
+
+.apply-btn:hover {
+  box-shadow: 0 5px 20px rgba(247, 198, 0, 0.3);
+}
+
+/* --- Responsive Modal (Mobile Friendly) --- */
+.apply-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9); /* Thoda dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px; /* Mobile par gap ke liye */
+}
+
+.form-box {
+  background: #111;
+  padding: clamp(25px, 5vw, 40px);
+  width: 100%;
+  max-width: 480px; /* Thoda wide desktop ke liye */
+  border-radius: 20px;
+  position: relative;
+  border: 1px solid #333;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  animation: popup .4s ease;
+  max-height: 90vh; /* Mobile par screen se bahar na jaye */
+  overflow-y: auto; /* Agar form bada ho toh scroll ho jaye */
+}
+
+@keyframes popup {
+  from { transform: scale(.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.form-box h2 {
+  color: #f7c600;
+  margin-bottom: 25px;
+  font-size: 28px;
 }
 
 .form-box input,
-.form-box textarea{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border:none;
-background:#222;
-color:#fff;
+.form-box textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #333;
+  background: #222;
+  color: #fff;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
 }
 
-.form-box button{
-background:#f7c600;
-border:none;
-padding:12px 25px;
-cursor:pointer;
+.form-box input:focus, 
+.form-box textarea:focus {
+  border-color: #f7c600;
 }
 
-.close-btn{
-position:absolute;
-top:10px;
-right:15px;
-cursor:pointer;
-color:#fff;
-font-size:20px;
+.form-box button {
+  background: #f7c600;
+  color: #000;
+  border: none;
+  padding: 14px 25px;
+  font-weight: 800;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.close-btn:hover { opacity: 1; color: #f7c600; }
+
+/* --- Breakpoints --- */
+
+@media (max-width: 1024px) {
+  .job-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tablet par 2 columns */
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .job-grid {
+    grid-template-columns: 1fr; /* Mobile par 1 column */
+    gap: 20px;
+  }
+  
+  .section-header h2 { font-size: 32px; }
+  
+  .form-box {
+    padding: 30px 20px;
+  }
+}
+
+
+/* drop-cv */
 .drop-cv{
 background:#000;
 padding:80px 20px;

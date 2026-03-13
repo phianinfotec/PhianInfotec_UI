@@ -5,6 +5,7 @@ import { Career } from './career/career';
 import { About } from './pages/about/about';
 import { Service } from './pages/service/service';
 import { Work } from './pages/work/work';
+import { Client } from './client/client';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -13,4 +14,5 @@ export const routes: Routes = [
   { path: 'about', component: About },
   { path: 'service', component: Service },
   { path: 'work', component: Work },
+  { path: 'client', component: Client },
 ];
