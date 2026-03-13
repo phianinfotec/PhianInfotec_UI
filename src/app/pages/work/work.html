@@ -1,126 +1,78 @@
-<!-- ================= OVERVIEW ================= -->
+<section class="brand-raids">
 
-<section class="work-section" *ngIf="viewMode === 'overview'">
-  <div class="work-container">
-    <div class="insight">
-      <h2>Insights</h2>
+  <div class="container">
 
-      <p>
-        Chrysalis – that moment when a caterpillar transforms into a butterfly. We bring chrysalis
-        to your brand differently.
-      </p>
-    </div>
+    <!-- HEADER -->
 
-    <div class="links">
-      <h2>Useful Links</h2>
+    <div class="header">
 
-      <div class="menu-item" (click)="openSection('web')">Websites</div>
-
-      <div class="menu-item" (click)="openSection('campaign')">Campaigns</div>
-    </div>
-
-    <div class="card-area">
-      <img src="assets/work_page_top.webp" loading="eager"  />
-    </div>
-  </div>
-</section>
-
-<!-- ================= WEBSITES ================= -->
-
-<section class="detail-section" *ngIf="viewMode === 'web'">
-  <div class="detail-container">
-    <button class="back-btn" (click)="goBack()">← Back</button>
-
-    <div class="campaign-header">
-      <h2 class="highlight-title">#Websites</h2>
-
-      <div class="header-line"></div>
-
-      <p class="highlight-text">
-        Our team is dedicated to crafting campaigns that leave a lasting impression, driving
-        meaningful outcomes for our clients.
-      </p>
-    </div>
-
-    <div class="works-grid">
-      <a class="works-item" *ngFor="let site of works" [href]="site.link" target="_blank">
-        <div class="works-poster">
-          <img [src]="site.image" loading="lazy" />
-        </div>
-
-        <div class="works-title">
-          {{ site.title }}
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CAMPAIGN ================= -->
-
-<section class="detail-section" *ngIf="viewMode === 'campaign'">
-  <div class="detail-container">
-    <button class="back-btn" (click)="goBack()">← Back</button>
-
-    <div class="campaign-header">
-      <h2 class="highlight-title">#RecentCampaigns</h2>
-
-      <div class="header-line"></div>
-
-      <p class="highlight-text">
-        Our team is dedicated to crafting campaigns that leave a lasting impression, driving
-        meaningful outcomes for our clients.
-      </p>
-    </div>
-
-    <div class="website-grid">
-      <div class="website-card" *ngFor="let site of Campaigns">
-        <div class="poster-card">
-          <img [src]="site.image" loading="lazy"/>
-        </div>
-
-        <div class="poster-name">
-          {{ site.title }}
-        </div>
+      <div class="left">
+        <h1>
+          Our Brand <br>
+          Raids
+        </h1>
       </div>
-    </div>
-  </div>
-</section>
 
-
-<section class="detail-section">
-
-  <div class="detail-container">
-
-    <button class="back-btn" (click)="goBack()">← Back</button>
-
-    <div class="campaign-header">
-
-      <h2 class="highlight-title">#Reels</h2>
-
-      <div class="header-line"></div>
-
-      <p class="highlight-text">
-        Creative short-form video campaigns crafted to capture attention and
-        drive engagement.
-      </p>
+      <div class="right">
+        <p>
+          At Phian Infotech we craft powerful digital campaigns,
+          immersive websites and engaging reels that help brands grow faster.
+        </p>
+      </div>
 
     </div>
 
+    <!-- FILTER -->
 
-    <div class="reels-grid">
+    <div class="filters">
 
-      <div class="reel-card" *ngFor="let reel of reels">
+      <span
+      [class.active]="activeFilter==='all'"
+      (click)="setFilter('all')">ALL</span>
 
-        <video 
-          [src]="reel.video"
-          muted
-          autoplay
-          loop
-          playsinline
-          
-          >
+      <span
+      [class.active]="activeFilter==='reels'"
+      (click)="setFilter('reels')">REELS</span>
+
+      <span
+      [class.active]="activeFilter==='web'"
+      (click)="setFilter('web')">WEBSITES</span>
+
+      <span
+      [class.active]="activeFilter==='campaign'"
+      (click)="setFilter('campaign')">CAMPAIGNS</span>
+
+    </div>
+
+    <!-- GRID -->
+
+    <div class="grid">
+
+      <div
+      class="card ultra-card"
+      *ngFor="let item of filteredItems; let i=index"
+      [style.animationDelay]="i * 80 + 'ms'">
+
+        <!-- WEBSITE -->
+        <a *ngIf="item.link" [href]="item.link" target="_blank">
+          <img *ngIf="item.image" [src]="item.image">
+        </a>
+
+        <!-- IMAGE -->
+        <img *ngIf="!item.link && item.image" [src]="item.image">
+
+        <!-- REEL -->
+        <video
+        *ngIf="item.video"
+        [src]="item.video"
+        muted
+        loop
+        playsinline
+        autoplay
+        class="reel-video">
         </video>
+
+        <h4>{{item.title}}</h4>
 
       </div>
 

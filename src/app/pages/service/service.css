@@ -1,0 +1,291 @@
+/* ================= HERO FULL WIDTH ================= */
+
+.sp-hero {
+    width: 100%;
+    background: linear-gradient(135deg, #ffc107, #ff9800);
+    padding: 120px 0;
+    color: white;
+    position: relative;
+
+    /* FORCE FULL WIDTH EVEN INSIDE ANY CONTAINER */
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+/* ================= CUSTOM CONTAINER ================= */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ================= GRID ================= */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.col-md-6 {
+    width: 50%;
+    padding: 15px;
+}
+
+/* ================= TEXT ================= */
+
+.sp-title {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+    color: white;
+}
+
+.sp-text {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 500px;
+    color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:991px) {
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    .sp-title {
+        font-size: 48px;
+    }
+
+    .sp-hero {
+        padding: 80px 0;
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .sp-title {
+        font-size: 38px;
+    }
+
+    .sp-text {
+        font-size: 16px;
+    }
+
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-lg-4 {
+    width: 33.33%;
+    padding: 15px;
+}
+
+.col-lg-8 {
+    width: 66.66%;
+    padding: 15px;
+}
+
+.v-center {
+    display: flex;
+    align-items: center;
+}
+
+/* ================= SECTION ================= */
+
+.pad-tb {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #f4ecec, #e9e4ef);
+}
+
+/* ================= HEADING ================= */
+
+.common-heading span {
+    color: #ff0066;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.common-heading h2 {
+    font-size: 46px;
+    font-weight: 700;
+    margin: 15px 0;
+    color: #08194a;
+    line-height: 1.2;
+}
+
+.common-heading p {
+    color: #6b6f8a;
+    line-height: 1.8;
+    max-width: 420px;
+}
+
+/* ================= CARD GRID ================= */
+
+.work-card-set {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    gap: 32px;
+}
+
+/* ================= CARD ================= */
+
+.work-card{
+    width:200px;
+    height:200px;
+    border-radius:30px;   /* THIS IS CORRECT */
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    transition:.35s;
+    cursor:pointer;
+}
+
+.work-card:hover {
+    transform: translateY(-10px);
+}
+
+/* ================= ICON ================= */
+
+.icon-bg {
+    margin-bottom: 14px;
+}
+
+.icon-bg img {
+    width: 70px;
+    height: 70px;
+}
+
+.work-card p {
+    font-weight: 600;
+    color: #08194a;
+}
+
+/* ================= CARD COLORS ================= */
+
+.cd4 {
+    background: #f4a261;
+}
+
+.cd1 {
+    background: #6ec6c5;
+}
+
+.cd5 {
+    background: #c7ea73;
+}
+
+.cd11 {
+    background: #e7d5b5;
+}
+
+.cd8 {
+    background: #7edc9c;
+}
+
+.cd3 {
+    background: #8edac7;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1200px) {
+
+    .work-card-set {
+        display: grid;
+        grid-template-columns: repeat(3, 210px);
+        gap: 34px;
+    }
+
+}
+
+@media(max-width:991px) {
+
+    .col-lg-4,
+    .col-lg-8 {
+        width: 100%;
+    }
+
+    .common-heading {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .work-card-set {
+        display: grid;
+        grid-template-columns: repeat(3, 210px);
+        gap: 34px;
+    }
+
+    .common-heading h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+.sp-img{
+  position:relative;
+  width:100%;
+  max-width:520px;
+}
+
+/* NORMAL IMAGE */
+
+.img-normal{
+  width:100%;
+  display:block;
+  transition:.4s;
+}
+
+/* GIF IMAGE */
+
+.img-gif{
+  width:100%;
+  position:absolute;
+  left:0;
+  top:0;
+  opacity:0;
+  transition:.4s;
+}
+
+/* HOVER EFFECT */
+
+.sp-img:hover .img-normal{
+  opacity:0;
+}
+
+.sp-img:hover .img-gif{
+  opacity:1;
+}
