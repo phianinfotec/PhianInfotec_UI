@@ -1,0 +1,91 @@
+
+<section class="career-hero">
+
+<div class="career-hero-content">
+  <h1>Join Our Team</h1>
+  <p>
+    Build your career with a passionate team that loves creativity,
+    innovation and digital growth.
+  </p>
+
+  <a href="" class="career-btn">View Open Positions</a>
+</div>
+
+</section>
+
+<section class="career-jobs" id="jobs">
+
+<h2>Open Positions</h2>
+
+<div class="job-grid">
+
+<div class="job-card">
+<h3>Digital Marketing Executive</h3>
+<p>Experience: 1-3 Years</p>
+<span>Full Time</span>
+<button (click)="openForm()" class="apply-btn">Apply Now</button>
+</div>
+
+<div class="job-card">
+<h3>SEO Specialist</h3>
+<p>Experience: 2+ Years</p>
+<span>Full Time</span>
+<button (click)="openForm()" class="apply-btn">Apply Now</button>
+</div>
+
+<div class="job-card">
+<h3>Web Developer</h3>
+<p>Experience: 2-4 Years</p>
+<span>Full Time</span>
+<button (click)="openForm()" class="apply-btn">Apply Now</button>
+</div>
+
+</div>
+
+</section>
+
+
+<div class="apply-modal" *ngIf="showForm">
+
+<div class="form-box">
+
+<span class="close-btn" (click)="closeForm()">✕</span>
+
+<h2>Apply for this Position</h2>
+
+<form>
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="text" placeholder="Phone Number">
+
+<input type="file">
+
+<textarea placeholder="Tell us about yourself"></textarea>
+
+<button type="submit">Submit Application</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+
+<section class="drop-cv">
+
+<h2>Drop Your CV</h2>
+
+<p>
+Didn’t find a matching position? We’d still love to hear from you.
+</p>
+
+<p>
+Send us your resume at
+<a href="mailto:hr@phianinfotec.com">hr@phianinfotec.com</a>
+</p>
+
+</section>

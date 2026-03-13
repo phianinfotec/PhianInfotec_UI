@@ -1,0 +1,191 @@
+.career-hero{
+  background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+  url('/assets/images/career-bg.jpg');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+
+  color:#fff;
+  padding:160px 20px;
+  text-align:center;
+}
+
+.career-hero-content{
+  max-width:700px;
+  margin:auto;
+}
+.career-hero h1{
+  font-size:50px;
+  color:#f7c600;
+}
+
+.career-hero p{
+  max-width:600px;
+  margin:auto;
+  margin-top:20px;
+  color:#aaa;
+}
+
+.career-btn{
+  display:inline-block;
+  margin-top:30px;
+  background:#f7c600;
+  color:#000;
+  padding:14px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.career-jobs{
+  background:#000;
+  padding:100px 20px;
+}
+
+.career-jobs h2{
+  text-align:center;
+  color:#f7c600;
+  font-size:40px;
+  margin-bottom:60px;
+}
+
+.job-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.job-card{
+  background:#111;
+  padding:30px;
+  border-radius:10px;
+  border:1px solid #222;
+  transition:0.4s;
+}
+
+.job-card:hover{
+  transform:translateY(-10px);
+  border-color:#f7c600;
+}
+
+.job-card h3{
+  color:#fff;
+  margin-bottom:10px;
+}
+
+.job-card p{
+  color:#aaa;
+}
+
+.job-card span{
+  display:inline-block;
+  margin:10px 0;
+  color:#f7c600;
+}
+
+.job-card button{
+  background:#f7c600;
+  border:none;
+  padding:10px 20px;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+.apply-modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
+.form-box{
+background:#111;
+padding:40px;
+width:420px;
+border-radius:12px;
+position:relative;
+border:1px solid #333;
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+animation:popup .4s ease;
+}
+
+@keyframes popup{
+from{
+transform:scale(.8);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.form-box h2{
+color:#f7c600;
+margin-bottom:20px;
+}
+
+.form-box input,
+.form-box textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:none;
+background:#222;
+color:#fff;
+}
+
+.form-box button{
+background:#f7c600;
+border:none;
+padding:12px 25px;
+cursor:pointer;
+}
+
+.close-btn{
+position:absolute;
+top:10px;
+right:15px;
+cursor:pointer;
+color:#fff;
+font-size:20px;
+}
+
+.drop-cv{
+background:#000;
+padding:80px 20px;
+text-align:center;
+}
+
+.drop-cv h2{
+color:#f7c600;
+font-size:36px;
+margin-bottom:15px;
+}
+
+.drop-cv p{
+color:#aaa;
+margin-bottom:10px;
+}
+
+.drop-cv a{
+color:#f7c600;
+text-decoration:none;
+font-weight:600;
+}
+
+@media(max-width:900px){
+
+.job-grid{
+grid-template-columns:1fr;
+}
+
+}
