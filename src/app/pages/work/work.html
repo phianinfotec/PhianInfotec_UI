@@ -1,0 +1,83 @@
+<section class="brand-raids">
+
+  <div class="container">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+      <div class="left">
+        <h1>
+          Our Brand <br>
+          Raids
+        </h1>
+      </div>
+
+      <div class="right">
+        <p>
+          At Phian Infotech we craft powerful digital campaigns,
+          immersive websites and engaging reels that help brands grow faster.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- FILTER -->
+
+    <div class="filters">
+
+      <span
+      [class.active]="activeFilter==='all'"
+      (click)="setFilter('all')">ALL</span>
+
+      <span
+      [class.active]="activeFilter==='reels'"
+      (click)="setFilter('reels')">REELS</span>
+
+      <span
+      [class.active]="activeFilter==='web'"
+      (click)="setFilter('web')">WEBSITES</span>
+
+      <span
+      [class.active]="activeFilter==='campaign'"
+      (click)="setFilter('campaign')">CAMPAIGNS</span>
+
+    </div>
+
+    <!-- GRID -->
+
+    <div class="grid">
+
+      <div
+      class="card ultra-card"
+      *ngFor="let item of filteredItems; let i=index"
+      [style.animationDelay]="i * 80 + 'ms'">
+
+        <!-- WEBSITE -->
+        <a *ngIf="item.link" [href]="item.link" target="_blank">
+          <img *ngIf="item.image" [src]="item.image">
+        </a>
+
+        <!-- IMAGE -->
+        <img *ngIf="!item.link && item.image" [src]="item.image">
+
+        <!-- REEL -->
+        <video
+        *ngIf="item.video"
+        [src]="item.video"
+        muted
+        loop
+        playsinline
+        autoplay
+        class="reel-video">
+        </video>
+
+        <h4>{{item.title}}</h4>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
