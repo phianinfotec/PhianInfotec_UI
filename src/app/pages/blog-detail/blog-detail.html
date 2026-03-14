@@ -1,1 +1,68 @@
-<p>blog-detail works!</p>
+<div class="blog-detail-wrapper" *ngIf="blogData">
+  <nav class="breadcrumb-nav">
+    <div class="container">
+      <a routerLink="/">Home</a> / <a routerLink="/blogs">Blogs</a> / <span>{{blogData.title}}</span>
+    </div>
+  </nav>
+
+  <header class="blog-hero" [style.background-image]="'url(' + blogData.image + ')'">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="blog-header-content">
+        <span class="category-tag">{{blogData.category}}</span>
+        <h1 class="blog-main-title">{{blogData.title}}</h1>
+        <div class="blog-meta">
+          <span><i class="far fa-user"></i> By {{blogData.author}}</span>
+          <span><i class="far fa-calendar-alt"></i> {{blogData.date}}</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="blog-body">
+    <div class="container">
+      <div class="article-grid">
+        <article class="article-content">
+          <p class="lead-text">{{blogData.excerpt}}</p>
+          <div class="content-featured-image">
+    <img [src]="blogData.image" [alt]="blogData.title">
+    <div class="image-caption">Featured Image: {{blogData.title}}</div>
+  </div>
+          <div class="full-text">
+            <p *ngFor="let para of blogData.content">{{para}}</p>
+          </div>
+          
+          <div class="share-article">
+            <h4>Share this article:</h4>
+            <div class="share-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <aside class="blog-sidebar">
+          <div class="sidebar-box subscribe-card">
+            <div class="_8px-circle"></div>
+            <h3>Stay Updated</h3>
+            <p>Get digital marketing insights delivered to your inbox.</p>
+            <div class="input-group">
+              <input type="email" placeholder="Your Email">
+              <button class="primary-button-gold">Subscribe</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="not-found-container" *ngIf="!blogData">
+  <div class="container">
+    <h2 class="stroked">404</h2>
+    <h1>Blog Not Found</h1>
+    <p>The insight you are looking for has moved or doesn't exist.</p>
+    <a routerLink="/blogs" class="primary-button">Back to All Blogs</a>
+  </div>
+</div>

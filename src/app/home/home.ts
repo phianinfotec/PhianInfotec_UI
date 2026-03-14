@@ -3,7 +3,6 @@ import { RouterModule, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { BlogService } from '../services/blog';
 
 @Component({
   selector: 'app-home',
@@ -25,9 +24,7 @@ export class Home {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private http: HttpClient,
-    private blogService: BlogService
-  ) {
+    private http: HttpClient  ) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -102,17 +99,38 @@ export class Home {
       items: ['Media-microchip', 'Public Relations'],
     },
   ];
-  latestBlogs: any[] = [];
 
 
 
-  ngOnInit() {
-    this.blogService.getAllBlogs().subscribe((res) => {
-      this.latestBlogs = res.slice(-3).reverse();
-    });
+openBlog(id: number) {
+  this.router.navigate(['/blog-detail', id]);
+}
+
+  // Dono ko merge karke ek hi jagah likhein
+latestBlogs = [
+  {
+    id: 1,
+    title: 'How to Generate a Solid On-page Strategy',
+    category: 'SEO',
+    date: 'Jan 03, 2026',
+    image: 'assets/.jpg',
+    excerpt: 'Master the art of on-page optimization with our latest guide...'
+  },
+  {
+    id: 2,
+    title: 'Digital Marketing Trends in 2026',
+    category: 'Marketing',
+    date: 'Feb 15, 2026',
+    image: 'assets/images/blog2.jpg',
+    excerpt: 'Stay ahead of the curve with these upcoming trends...'
+  },
+  {
+    id: 3,
+    title: 'The Future of AI in Web Development',
+    category: 'Tech',
+    date: 'March 10, 2026',
+    image: 'assets/images/blog3.jpg',
+    excerpt: 'How AI is reshaping the way we build modern websites...'
   }
-
-  openBlog(id: number) {
-    this.router.navigate(['/blog', id]);
-  }
+];
 }

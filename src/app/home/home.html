@@ -214,7 +214,6 @@
 </section>
 
 <section class="blog-section-dark">
-
   <div class="container">
 
     <div class="section-title-center">
@@ -222,56 +221,48 @@
         <div class="_8px-circle"></div>
         Latest Blogs
       </div>
-
       <h2 class="view-all-title">
-        DIGITAL MARKETING <span>INSIGHTS</span>
+        DIGITAL MARKETING <span class="stroked">INSIGHTS</span>
       </h2>
     </div>
 
-    <div class="blog-grid-dark">
-
-      <div class="blog-card-dark"
-      *ngFor="let blog of latestBlogs"
-      (click)="openBlog(blog.id)">
-
-        <div class="blog-img-dark">
-          <img [src]="blog.image">
-        </div>
-
-        <div class="blog-content-dark">
-
-          <div class="blog-meta-dark">
-
-            <span class="blog-category-dark">
-              {{blog.category}}
-            </span>
-
-            <span class="blog-date-dark">
-              {{blog.date}}
-            </span>
-
-          </div>
-
-          <h3>{{blog.title}}</h3>
-
-          <p class="blog-excerpt-dark">
-            {{blog.excerpt}}
-          </p>
-
-        </div>
-
-      </div>
-
+   <div class="blog-grid-dark">
+  <div class="blog-card-dark" 
+       *ngFor="let blog of latestBlogs.slice(0,3)" 
+       (click)="openBlog(blog.id)">
+    
+    <div class="blog-img-dark">
+      <img [src]="blog.image" alt="blog thumb">
+      <div class="blog-category-badge">{{blog.category}}</div>
     </div>
 
-    <div style="text-align:center;margin-top:50px;">
+    <div class="blog-content-dark">
+      <div class="blog-meta-dark">
+        <span class="blog-date-dark"><i class="far fa-calendar-alt"></i> {{blog.date}}</span>
+      </div>
+
+      <h3 class="blog-title-dark">{{blog.title}}</h3>
+      
+      <p class="blog-excerpt-dark">
+        {{blog.excerpt}}
+      </p>
+
+      <div class="blog-footer-dark">
+        <span class="read-more" style="pointer-events: none;">
+          Read Article <i class="fas fa-arrow-right"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="view-all-container">
       <a routerLink="/blogs" class="primary-button">
-        View All Blogs →
+        View All Insights →
       </a>
     </div>
 
   </div>
-
 </section>
 
 <!-- clients -->
@@ -307,16 +298,18 @@
       <div class="client-box"><img src="assets/logo-38.webp" alt="Client Logo" /></div>
     </div>
 
-    <div class="view-more-container">
+    <div style="text-align:center;margin-top:50px;">
       <a routerLink="/client" class="primary-button">
-        View All Clients <i class="fas fa-arrow-right"></i>
+        View All Clients →
       </a>
     </div>
   </div>
 </section>
 
+
+
 <!-- projects -->
-<section id="projects" class="horizontal-slider-section">
+<!-- <section id="projects" class="horizontal-slider-section">
   <div class="camera">
     <div class="section-title-center">
       <div class="sub-title">
@@ -382,8 +375,6 @@
           <div class="portfolio-info-card"><h3>Mukunda Infraventures Private Limited</h3></div>
         </a>
       </div>
-
-      <!-- DUPLICATE (same again) -->
       <div class="portfolio-horizontal">
         <a href="https://shravanhospital.com/" target="_blank" class="portfolio-card">
           <img src="assets/shpl.png" loading="lazy" class="portfolio-thumbnail" />
@@ -444,7 +435,9 @@
   <div class="view-more-project">
     <a routerLink="/work" class="primary-button"> Projects<i class="fas fa-arrow-right"></i> </a>
   </div>
-</section>
+</section> -->
+
+
 
 <!-- <section class="logo-strip-section">
   <div class="logo-strip">
