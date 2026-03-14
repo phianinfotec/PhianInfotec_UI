@@ -1,27 +1,66 @@
-<section class="about-hero">
-  <!-- animated gradient -->
-  <div class="bg-animation"></div>
 
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <h1>
-          Thought-leadership and digital <br />
-          marketing built our business.
+<header id="about-hero" class="hero-section w-background-video w-background-video-atom">
+  <video
+    id="about-video-element"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    [muted]="true"
+  >
+    <source src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133%2F681795b5c8bbadc55475a4d4_2324166-hd_1920_1080_25fps-transcode.mp4" type="video/mp4" />
+  </video>
+
+  <div class="container hero" style="opacity: 1; position: relative; z-index: 3;">
+    <div class="hero-block">
+      <div class="hero-top-content">
+        <div class="sub-title">
+          <div class="_8px-circle"></div>
+          <div class="gradient-bg">Our Story</div>
+        </div>
+        <h2 class="hero-sub-heading">
+          Led by visionaries, driven by digital excellence.
+        </h2>
+      </div>
+
+      <div class="hero-title-block">
+        <h1 class="hero-heading-17cqw">
+          Thought <span class="stroked">Leadership</span>
         </h1>
-
-        <p>
-          Phian Infotech was co-founded in 2014 by Dev Ghosh — Nagpur's Best Selling Author and one
+        <p style="color: #fff; max-width: 600px; margin-top: 20px; font-size: 1.1rem; line-height: 1.6;">
+          Phian Infotech was co-founded in 2014 by Dev Ghosh — Nagpur's Best Selling Author and one 
           of the world’s most influential marketers.
         </p>
       </div>
 
-      <div class="hero-image">
-        <img src="assets/ChatGPT Image Mar 11, 2026, 01_20_00 PM.png" />
-      </div>
+      <div class="circle-hero"></div>
+      <div class="circle-left-top"></div>
+      <div class="circle-small-3"></div>
+      
+      <img
+        src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67baea8c84b37ae060a08c23_star%20(1).avif"
+        loading="lazy"
+        alt="star decorative"
+        class="_60px-star-loop"
+      />
     </div>
   </div>
-</section>
+
+  <div class="hero-social-block" style="z-index: 4;">
+    <div class="text-priamry w-embed">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+        <path d="M12.5 0.25L15.7411 9.00891L24.5 12.25L15.7411 15.4911L12.5 24.25L9.25891 15.4911L0.5 12.25L9.25891 9.00891L12.5 0.25Z" fill="currentColor" />
+      </svg>
+    </div>
+    <p class="_20px-title">About Phian</p>
+    <div class="hero-title-divider"></div>
+  </div>
+
+  <div class="hero-section-overlay"></div>
+</header>
+
+
 <section class="about-stats">
   <div class="stats-container">
     <div class="stat-card">

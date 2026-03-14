@@ -19,76 +19,402 @@ body {
 /* ===================================================
    ABOUT HERO (BLACK & GOLD)
    =================================================== */
-.about-hero {
-    position: relative;
-    width: 100%;
-    min-height: 90vh;
-    background: var(--bg-black);
+/* HERO SOCIAL ICONS */
+.horizontal-left-center-12px-gap {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f5f5f5;
+  color: black;
+  font-size: 18px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.footer-social-icon:hover {
+  background: #ffc107;
+  transform: translateY(-3px);
+}
+
+
+/* HERO BUTTON */
+
+.primary-button {
+  background-color: #ffcc00 !important;
+  color: #000000 !important;
+  padding: 8px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 1px solid #ffcc00;
+  text-align: center;
+}
+
+.primary-button:hover {
+  background-color: transparent !important;
+  color: #ffcc00 !important;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+
+/* HERO SECTION */
+
+.hero-section {
+  min-height: 110vh !important;
+  padding-top: 170px !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-top-content {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 100px;
+}
+
+.hero-block {
+ position: relative;
+  z-index: 5;
+  width: 100%;
+  min-height: 80vh; /* Isse content vertically center rahega */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical Center */
+  padding-left: 5%;
+}
+
+
+/* VIDEO */
+
+#hero-video-element {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+
+/* STAR ANIMATION */
+
+._60px-star-loop {
+  animation: rotateStar 10s linear infinite;
+  position: absolute;
+  z-index: 4;
+}
+
+@keyframes rotateStar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* GLOW CIRCLES */
+
+.circle-hero,
+.circle-left-top,
+.circle-small-3,
+.circle-small-2,
+.circle-small {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+  filter: blur(60px);
+  opacity: 0.6;
+  pointer-events: none;
+  animation: floatWebflow 15s ease-in-out infinite alternate !important;
+  will-change: transform;
+}
+
+@keyframes floatWebflow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(60px, -80px, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(-30px, 40px, 0) scale(0.95);
+  }
+}
+
+/* INDIVIDUAL POSITIONS */
+
+.circle-hero {
+  width: 350px;
+  height: 350px;
+  background: #ff9d66;
+  top: 10%;
+  right: 5%;
+}
+
+.circle-left-top {
+  width: 250px;
+  height: 250px;
+  background: #669dff;
+  top: 5%;
+  left: 10%;
+  animation-duration: 20s;
+  animation-delay: -5s;
+}
+
+.circle-small-3 {
+  width: 120px;
+  height: 120px;
+  background: #ff9d66;
+  top: 40%;
+  left: 35%;
+  animation-duration: 12s;
+  animation-delay: -2s;
+  opacity: 0.4;
+}
+/* circle-hero */
+.circle-hero,
+.circle-left-top,
+.circle-small-3,
+.circle-small-2,
+.circle-small {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+  filter: blur(60px);
+  opacity: 0.6;
+  pointer-events: none;
+  display: block !important;
+  /* Ensure karein ki ye hidden na ho */
+
+  /* Hardware acceleration ke liye translate3d use karein */
+  animation: floatWebflow 15s ease-in-out infinite alternate !important;
+  will-change: transform;
+}
+
+/* Is animation ko replace karein */
+@keyframes floatWebflow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(60px, -80px, 0) scale(1.1);
+  }
+
+  100% {
+    transform: translate3d(-30px, 40px, 0) scale(0.95);
+  }
+}
+
+/* --- Specific Positions jaise aapne image mein dikhaya hai --- */
+
+.circle-hero {
+  width: 350px;
+  height: 350px;
+  background: #ff9d66;
+  /* Orange glow */
+  top: 10%;
+  right: 5%;
+  animation-duration: 15s;
+  /* Har circle ki speed alag rakhein */
+}
+
+.circle-left-top {
+  width: 250px;
+  height: 250px;
+  background: #669dff;
+  /* Blue/Purplish glow */
+  top: 5%;
+  left: 10%;
+  animation-duration: 20s;
+  animation-delay: -5s;
+}
+
+.circle-small-3 {
+  width: 120px;
+  height: 120px;
+  background: #ff9d66;
+  top: 40%;
+  left: 35%;
+  /* Beech wala circle */
+  animation-duration: 12s;
+  animation-delay: -2s;
+  opacity: 0.4;
+}
+
+/* Star Loop Animation (Jo aapke pass pehle se hai, wo sahi hai) */
+._60px-star-loop {
+  position: absolute;
+  z-index: 4;
+  /* Text ke saath upar */
+  animation: rotateStar 10s linear infinite;
+}
+.hero-heading-17cqw {
+  font-size: clamp(3rem, 8vw, 6rem); /* Responsive font size */
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.9;
+  margin-top: 20px;}
+
+  .sub-title{
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    border: 1px solid #FFCC00;
+    border-radius: var(--radius--border-xl);
+    color: #FFCC00;
+    justify-content: flex-start;
+    align-items: center;
+    /* margin-bottom: px; */
+    padding: 8px 20px;
     display: flex;
-    align-items: center;
-    overflow: hidden;
-    padding: 100px 0;
+  }
+  ._8px-circle
+ {
+    width: 8px;
+    height: 8px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+}
+.gradient-bg {
+  color: #ffcc00;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 14px;
 }
 
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 60px;
-    position: relative;
-    z-index: 2;
+.hero-sub-heading {
+    max-width: 500px;
+    /* margin-top: 0; */
+    /* margin-bottom: 40px; */
 }
 
-.hero-text h1 {
-    font-size: 64px;
-    font-weight: 900;
-    line-height: 1.1;
-    color: var(--primary-gold); /* Gold Title */
-    margin-bottom: 25px;
+
+/* ===================================================
+   OPTIMIZED RESPONSIVE CSS
+   =================================================== */
+
+/* --- TABLETS & SMALL LAPTOPS (1024px) --- */
+@media screen and (max-width: 1024px) {
+    .hero-section {
+        padding-top: 120px !important;
+        min-height: 90vh !important;
+    }
+    .hero-block {
+        padding-left: 50px !important;
+    }
+    .hero-heading-17cqw {
+        font-size: 5rem !important; /* Slightly smaller for tablets */
+    }
 }
 
-.hero-text p {
-    font-size: 20px;
-    color: var(--text-muted);
-    line-height: 1.7;
-    max-width: 520px;
+/* --- LARGE MOBILE & SMALL TABLETS (768px - iPad) --- */
+@media screen and (max-width: 768px) {
+    .hero-section {
+        padding-top: 100px !important;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+    .hero-block {
+        padding-left: 0 !important; /* Center alignment */
+        align-items: center;
+    }
+    .sub-title {
+        margin: 0 auto !important; /* Badge centering */
+    }
+    .hero-heading-17cqw {
+        font-size: 4rem !important;
+        line-height: 1;
+    }
+    .hero-sub-heading {
+        margin: 0 auto 30px auto !important;
+        font-size: 1.8rem !important;
+    }
+    /* Glow circles scaling */
+    .circle-hero, .circle-left-top {
+        width: 200px !important;
+        height: 200px !important;
+    }
 }
 
-.hero-image img {
-    width: 100%;
-    max-width: 600px;
-    filter: drop-shadow(0 0 30px rgba(255, 212, 0, 0.2));
-    animation: floatImage 4s ease-in-out infinite;
+/* --- MOBILE LANDSCAPE / LARGE PHONES (425px) --- */
+@media screen and (max-width: 425px) {
+    .hero-heading-17cqw {
+        font-size: 3rem !important;
+    }
+    .hero-sub-heading {
+        font-size: 1.5rem !important;
+        max-width: 90% !important;
+    }
+    ._60px-star-loop {
+        width: 40px; /* Small star for mobile */
+        right: 10px;
+    }
 }
 
-@keyframes floatImage {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+/* --- STANDARD MOBILE (375px - iPhone X/12/13) --- */
+@media screen and (max-width: 375px) {
+    .hero-section {
+        padding-top: 80px !important;
+    }
+    .hero-heading-17cqw {
+        font-size: 2.6rem !important;
+        letter-spacing: -1px;
+    }
+    .hero-sub-heading {
+        font-size: 1.3rem !important;
+    }
+    .primary-button {
+        width: 80%; /* Button full width on small screens */
+        padding: 12px;
+    }
 }
 
-/* Animated Gradient Background */
-.bg-animation {
-    position: absolute;
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle, rgba(255, 212, 0, 0.05) 0%, transparent 70%);
-    top: -200px;
-    right: -200px;
-    animation: rotateBg 20s linear infinite;
-    z-index: 1;
+/* --- VERY SMALL PHONES (320px - iPhone SE) --- */
+@media screen and (max-width: 320px) {
+    .hero-heading-17cqw {
+        font-size: 2.2rem !important;
+    }
+    .hero-sub-heading {
+        font-size: 1.1rem !important;
+    }
+    .gradient-bg {
+        font-size: 12px;
+    }
+    .circle-hero, .circle-left-top {
+        filter: blur(40px); /* Reduce blur to save performance */
+    }
+    .hero-top-content{
+        margin-top: 0px;
+    }
 }
 
-@keyframes rotateBg {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
 
 /* ===================================================
    STATS SECTION
    =================================================== */
 .about-stats {
     background: #080808;
-    padding: 80px 0;
+    /* padding: 80px 0; */
 }
 
 .stats-container {
