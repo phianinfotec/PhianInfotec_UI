@@ -124,3 +124,259 @@ width: 100%;
 @media (max-width: 500px) {
   .client-logo-grid { grid-template-columns: repeat(2, 1fr); } /* Small Mobile: 2 Columns */
 }
+
+
+/* ===================================================
+   HERO SECTION (BLACK GOLD REUSABLE)
+=================================================== */
+
+.hero-section {
+    min-height: 110vh;
+    padding-top: 170px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section-overlay {
+    background: rgba(0,0,0,.4);
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-block {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+}
+
+.hero-top-content {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 100px;
+}
+
+.hero-title-block p {
+    color: #fff;
+    max-width: 600px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* VIDEO */
+
+#hero-video-element {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* SUB TITLE */
+
+.sub-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #FFCC00;
+    padding: 8px 20px;
+    border-radius: 40px;
+    color: #FFCC00;
+}
+
+._8px-circle {
+    width: 8px;
+    height: 8px;
+    background: #ffcc00;
+    border-radius: 50%;
+}
+
+.gradient-bg {
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+}
+
+/* MAIN HEADING */
+
+.hero-heading-17cqw {
+    font-size: clamp(3rem,8vw,6rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: .9;
+    margin-top: 20px;
+}
+
+.stroked {
+    -webkit-text-stroke: 1px #ffcc00;
+    color: transparent;
+}
+
+/* BUTTON */
+
+.primary-button {
+    background: #ffcc00;
+    color: #000;
+    padding: 10px 26px;
+    border-radius: 50px;
+    font-weight: 700;
+    border: 1px solid #ffcc00;
+    display: inline-block;
+    transition: .3s;
+}
+
+.primary-button:hover {
+    background: transparent;
+    color: #ffcc00;
+    transform: translateY(-3px);
+}
+
+/* STAR */
+
+._60px-star-loop {
+    position: absolute;
+    z-index: 4;
+    animation: rotateStar 10s linear infinite;
+}
+
+@keyframes rotateStar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* GLOW CIRCLES */
+
+.circle-hero,
+.circle-left-top,
+.circle-small-3,
+.circle-small-2,
+.circle-small {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: .6;
+    pointer-events: none;
+    animation: floatHero 15s ease-in-out infinite alternate;
+}
+
+@keyframes floatHero {
+    0% { transform: translate3d(0,0,0) scale(1); }
+    50% { transform: translate3d(60px,-80px,0) scale(1.1); }
+    100% { transform: translate3d(-30px,40px,0) scale(.95); }
+}
+
+/* POSITIONS */
+
+.circle-hero {
+    width: 350px;
+    height: 350px;
+    background: #ff9d66;
+    top: 10%;
+    right: 5%;
+}
+
+.circle-left-top {
+    width: 250px;
+    height: 250px;
+    background: #669dff;
+    top: 5%;
+    left: 10%;
+}
+
+.circle-small-3 {
+    width: 120px;
+    height: 120px;
+    background: #ff9d66;
+    top: 40%;
+    left: 35%;
+    opacity: .4;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:1024px){
+
+.hero-section{
+    padding-top:120px;
+    min-height:90vh;
+}
+
+.hero-block{
+    padding-left:50px;
+}
+
+.hero-heading-17cqw{
+    font-size:5rem;
+}
+
+}
+
+@media (max-width:768px){
+
+.hero-section{
+    padding-top:100px;
+    text-align:center;
+    display:flex;
+    align-items:center;
+}
+
+.hero-block{
+    padding-left:0;
+    align-items:center;
+}
+
+.sub-title{
+    margin-right:auto;
+}
+
+.hero-heading-17cqw{
+    font-size:clamp(32px,9vw,42px);
+}
+
+.hero-sub-heading{
+    margin:0 auto 30px;
+}
+
+.circle-hero,
+.circle-left-top{
+    width:200px;
+    height:200px;
+}
+
+}
+
+@media (max-width:425px){
+
+.hero-heading-17cqw{
+    font-size:3rem;
+}
+
+}
+
+@media (max-width:375px){
+
+.hero-section{
+    padding-top:80px;
+}
+
+.primary-button{
+    width:80%;
+}
+
+}
+
+@media (max-width:320px){
+
+.hero-heading-17cqw{
+    font-size:2.2rem;
+}
+
+}

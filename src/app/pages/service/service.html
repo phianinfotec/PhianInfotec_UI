@@ -1,22 +1,82 @@
-<section class="sp-hero">
-
+<!-- <section class="sp-hero">
   <div class="container">
-  <div class="row align-items-center">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1 class="sp-title">Expert <br />Services</h1>
+      </div>
 
-    <div class="col-md-6">
-      <h1 class="sp-title">Expert <br />Services</h1>
+      <div class="col-md-6">
+        <p class="sp-text">
+          Authentic branding. Real impact. We help your business reach its full potential.
+        </p>
+      </div>
     </div>
-
-    <div class="col-md-6">
-      <p class="sp-text">
-        Authentic branding. Real impact. We help your business reach its full potential.
-      </p>
-    </div>
-
   </div>
-</div>
+</section> -->
 
-</section>
+<header id="hero" class="hero-section w-background-video w-background-video-atom">
+  <video id="hero-video-element" autoplay muted loop playsinline preload="auto" [muted]="true">
+    <source
+      src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133%2F681795b5c8bbadc55475a4d4_2324166-hd_1920_1080_25fps-transcode.mp4"
+      type="video/mp4"
+    />
+  </video>
+
+  <div class="container hero" style="opacity: 1; position: relative; z-index: 3">
+    <div class="hero-block">
+      <div class="hero-top-content">
+        <div class="sub-title">
+          <div class="_8px-circle"></div>
+          <div class="gradient-bg">Expert Services</div>
+        </div>
+        <h2 class="hero-sub-heading">
+          
+        </h2>
+        <div>
+          <a [routerLink]="['/']" class="primary-button w-inline-block">
+            <div class="button-text-wrapper-26px">
+              <div class="default-text">View Home</div>
+              <!-- <div class="default-text">View Services</div> -->
+            </div>
+            <div class="hover-color"></div>
+            <div class="circle-position"><div class="_15px-circle"></div></div>
+            <div class="circle-position"><div class="_15px-circle"></div></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-title-block">
+        <!-- <h1 class="hero-heading-17cqw">Thought <span class="stroked">Leadership</span></h1> -->
+        <p
+          style="
+            color: #fff;
+            max-width: 600px;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+          "
+        >
+          Authentic branding. Real impact. We help your business reach its full potential.
+        </p>
+      </div>
+
+      <div class="circle-hero"></div>
+      <div class="circle-left-top"></div>
+      <div class="circle-small-3"></div>
+      <div class="circle-small-2"></div>
+      <div class="circle-small"></div>
+
+      <img
+        src="https://cdn.prod.website-files.com/67bad91522bc0ef5852a9133/67baea8c84b37ae060a08c23_star%20(1).avif"
+        loading="lazy"
+        alt="star decorative"
+        class="_60px-star-loop"
+      />
+    </div>
+  </div>
+
+  <div class="hero-section-overlay"></div>
+</header>
 
 <section class="work-category pad-tb">
   <div class="container">
@@ -48,12 +108,9 @@
   </div>
 </section>
 
-
-
 <section class="sp-service" *ngFor="let s of services; let i = index">
   <div class="container">
     <div class="row align-items-center" [ngClass]="{ 'flex-row-reverse': i % 2 == 0 }">
-      
       <div class="col-md-6">
         <div class="sp-img">
           <img class="img-gif-only" [src]="s.gif" [alt]="s.title" />
@@ -64,7 +121,6 @@
         <h3 class="sp-heading" [innerHTML]="s.title"></h3>
         <p class="sp-desc">{{ s.desc }}</p>
       </div>
-
     </div>
   </div>
 </section>
