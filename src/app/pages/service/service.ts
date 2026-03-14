@@ -22,51 +22,62 @@ export class Service {
   services = [
     {
       title: 'Creative & <br>Digital Strategy',
-      desc: 'We marinate strategies that best suit your business objectives.',
-      img: 'https://socialpanga.com/wp-content/uploads/2021/04/01-service-social-media-creative-srtategy.png',
-      gif: 'https://socialpanga.com/wp-content/uploads/2021/04/01-service-gif-social-media-creative-srtategy.gif',
+      desc: 'We marinate strategies that best suit your business objectives by sprinkling the perfect salts of creativity and research.',
+    
+      gif: 'assets/creative.gif',
     },
 
     {
       title: 'Media Planning <br>& Buying',
-      desc: 'We help you profitably define your marketing goals.',
-      img: 'https://socialpanga.com/wp-content/uploads/2021/04/02-service-media-planning-buying.png',
-      gif: 'https://socialpanga.com/wp-content/uploads/2021/04/02-service-gif-media-planning-buying.gif',
+      desc: 'We help you profitably define your marketing goals with our expertise in media planning and buying.',
+     
+      gif:'assets/money.gif',
     },
 
     {
       title: 'Analytics & SEO',
-      desc: 'Our SEO and Analytics team delivers performance insights.',
-      img: 'https://socialpanga.com/wp-content/uploads/2021/04/03-service-analytics-seo.png',
-      gif: 'https://socialpanga.com/wp-content/uploads/2021/04/03-service-gif-analytics-seo.gif',
+      desc: 'The P in Phian stands for performance and our SEO and Analytics team delivers it with appropriate insights that have the ability to transform your business.',
+     
+      gif: 'assets/seo.gif',
     },
 
     {
       title: 'Branding & Marketing <br>Communications',
-      desc: 'We give your brand a powerful voice.',
-      img: 'https://socialpanga.com/wp-content/uploads/2021/04/04-service-branding-marketing-communications.png',
-      gif: 'https://socialpanga.com/wp-content/uploads/2021/04/04-service-gif-branding-marketing-communications.gif',
+      desc: 'When we say we give your brand a VOICE we mean – V : Versatile, O : Omnipotent, I : Impressional, C : Captivating, E : Empowered way of branding and communicating your business.',
+  
+      gif: 'assets/branding.gif',
     },
 
     {
       title: 'Mobile & Website <br>UI/UX',
-      desc: 'User friendly interface crafted perfectly.',
-      img: 'https://socialpanga.com/wp-content/uploads/2021/04/05-service-mobile-website-ui-ux.png',
-      gif: 'https://socialpanga.com/wp-content/uploads/2021/04/05-service-gif-mobile-website-ui-ux.gif',
+      desc: 'From the essential to the ornate, everything is taken care of completely, to offer a user-friendly interface and experience to your consumers.',
+     
+      gif: 'assets/mobile2-unscreen.gif',
     },
 
     {
       title: 'Influencer <br>Management',
-      desc: 'We find the right influencer for your brand.',
-      img: 'https://socialpanga.com/wp-content/uploads/2021/04/06-service-influencer-management.png',
-      gif: 'https://socialpanga.com/wp-content/uploads/2021/04/06-service-gif-influencer-management.gif',
+      desc: 'To make your idea come to life, we dive into a pool of talent and find the right influencer(s) for the task in hand.',
+    
+      gif: 'assets/social.gif',
     },
 
     {
       title: 'Video <br>Production',
-      desc: 'Perfect storyline with perfect shots.',
-      img: 'https://socialpanga.com/wp-content/uploads/2021/04/07-service-videio-production.png',
-      gif: 'https://socialpanga.com/wp-content/uploads/2021/04/07-service-gif-videio-production.gif',
+      desc: 'A perfect storyline is incomplete without the right set of shots taken from the perfect angles.',
+      gif: 'assets/vedio3.gif',
+    },
+
+    {
+      title: 'Consulting Services',
+      desc: 'We do a thorough research and integrate industry insights with internet trends to give you the best advice.',
+      gif: 'assets/consulting.gif',
+    },
+
+    {
+      title: 'Technology',
+      desc: 'Only unrealistic aspect of us using technology is the experience we create for you outside our daily lives using the best of tech and tools.',
+      gif: 'assets/tech1.gif',
     },
   ];
 }

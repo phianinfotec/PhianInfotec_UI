@@ -58,37 +58,58 @@
 /* --- Logo Grid Logic --- */
 .client-logo-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Desktop: 6 Columns */
-  gap: 30px;
+  /* Use auto-fill to make them wrap naturally like the screenshot */
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+  gap: 20px;
   margin-top: 50px;
 }
 
 .logo-box {
-  background: #111; /* Dark background box */
-  padding: 30px;
-  border-radius: 20px;
-  border: 1px solid #222; /* Clean border */
+background: #ffffff;
+  height: 120px; 
+  border-radius: 10px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: all 0.4s ease;
-  height: 160px; /* Fixed height for consistency */
+  align-items: center;
+  padding: 15px 25px;
+  cursor: pointer;
+  
+  /* Use 'position: relative' so the logo inside can move */
+  position: relative;
+  
+  /* Initial static state (prevent jumping) */
+  border: 2px solid transparent;
+  transform: translateZ(0); /* Hardware acceleration for smoother animations */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo-box img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* Logos na katein */
-  transition: 0.3s;
+width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  
+  /* Prepare the logo for moving */
+  position: relative; 
+  top: 0;
+  
+  /* Vertical motion timing */
+  transition: top 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 /* --- Hover Effects --- */
 .logo-box:hover {
-  background: #1a1a1a;
-  border-color: #f7c600; /* Border yellow ho jayega */
-  transform: translateY(-5px); /* Chhota angular movement */
+  transform: scale(1.02);
+  /* This creates the yellow glowing border seen in the screenshot */
+  border-color: #f7c600; 
+  box-shadow: 0 0 20px rgba(247, 198, 0, 0.4);
 }
 
+.more-clients-footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: right; 
+  color: #FFCC00;
+}
 /* --- Responsive Layout --- */
 @media (max-width: 1100px) {
   .client-logo-grid { grid-template-columns: repeat(4, 1fr); } /* Tablet: 4 Columns */

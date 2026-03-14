@@ -1,0 +1,103 @@
+.phian-team-section {
+  padding: 100px 0;
+  background-color: #000000; /* Pure Black Background */
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Header Styling --- */
+.team-header-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  gap: 60px;
+}
+
+.sub-tagline {
+  font-size: 14px;
+  font-weight: 800;
+  color: #f7c600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.sharp-title {
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.yellow-accent { color: #f7c600; }
+
+.highlight-p { font-size: 19px; font-weight: 600; color: #ffffff; margin-bottom: 20px; }
+.secondary-p { font-size: 16px; color: #aaaaaa; margin-bottom: 15px; }
+
+/* --- THE GRID & IMAGES --- */
+.team-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 40px;
+}
+
+.image-box {
+  background-color: transparent; /* Transparent to match section */
+  aspect-ratio: 1 / 1.1; /* Slightly taller for portrait feel */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Image starts from the very bottom */
+  margin-bottom: 25px;
+}
+
+.portrait-img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  position: relative;
+  top: 0; /* Starting point */
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Professional smooth slide */
+}
+
+/* --- HOVER TRANSFORMATION --- */
+.member-card:hover .portrait-img {
+  transform: translateY(-15px); /* Simple vertical move up */
+}
+
+/* --- Text Styling --- */
+.text-details h3 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #f7c600; /* Yellow Name */
+  margin-bottom: 5px;
+}
+
+.role {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.bio {
+  font-size: 15px;
+  color: #cccccc;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .team-grid-container { grid-template-columns: repeat(2, 1fr); }
+  .team-header-flex { flex-direction: column; }
+}

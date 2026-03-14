@@ -254,38 +254,70 @@
 
 }
 
-
-.sp-img{
-  position:relative;
-  width:100%;
-  max-width:520px;
+/* ================= SERVICE SECTION (DARK) ================= */
+.sp-service {
+    padding: 50px 0;
+    background-color: #000000; /* Pure Black Background */
+    color: #ffffff;
+    overflow: hidden;
 }
 
-/* NORMAL IMAGE */
-
-.img-normal{
-  width:100%;
-  display:block;
-  transition:.4s;
+/* Image/GIF Container */
+.sp-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* GIF IMAGE */
-
-.img-gif{
-  width:100%;
-  position:absolute;
-  left:0;
-  top:0;
-  opacity:0;
-  transition:.4s;
+/* Reduced GIF Size */
+.img-gif-only {
+    width: 60%;       /* Reduced from 100% */
+    max-width: 400px; /* Limits the maximum growth */
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    /* Optional: subtle glow effect on black background */
+    box-shadow: 0 0 20px rgba(247, 198, 0, 0.1); 
+    transition: transform 0.4s ease;
+    background-color: transparent;
 }
 
-/* HOVER EFFECT */
-
-.sp-img:hover .img-normal{
-  opacity:0;
+.sp-img:hover .img-gif-only {
+    transform: translateY(-10px); /* Subtle lift on hover */
 }
 
-.sp-img:hover .img-gif{
-  opacity:1;
+/* ================= TYPOGRAPHY (DARK THEME) ================= */
+.sp-heading {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f7c600; /* Yellow Heading to pop on black */
+    margin-bottom: 25px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.sp-desc {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #cccccc; /* Light grey for readability */
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 991px) {
+    .sp-service {
+        padding: 60px 0;
+    }
+    
+    .sp-heading {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .img-gif-only {
+        width: 70%; /* Even smaller on tablets */
+        margin-bottom: 30px;
+    }
 }
